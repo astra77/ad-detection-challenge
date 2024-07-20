@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<style>
+
+@font-face {
+  font-family: "Atkinson";
+  src: url("fonts/Atkinson-Hyperlegible-Regular-102.woff") format('woff');
+}
+@font-face {
+  font-family: "Atkinson Bold";
+  src: url("fonts/Atkinson-Hyperlegible-Bold-102.woff") format('woff');
+}
+body {
+  #background: #edf2f7;
+ 
+  font-family: Atkinson;
+  # text-align: center;
+  margin-left: 7em;
+  margin-right: 7em;
+  #color:#003471;
+}
+.bold{
+   font-family: "Atkinson Bold";
+}
+p {  font-size: 1.8em;
+    /* color: #a70614; */
+    text-align: left;
+    
+ }
+
+h1 { font-size: 2.8em; font-family:helvetica;}
+h2 { font-size: 2em; font-family:helvetica;}
+nav { 
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 24px;
+
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width:1200px;
+    margin:0 auto;
+}
+  
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    column-gap: 2%;
+    width: 90%;
+    margin: 50px auto;
+    border-top:3px solid;
+}
+nav a {
+    text-decoration: none;
+    padding: 12px;
+    text-transform: uppercase;
+    font-size: 14px;
+    #border-bottom: 3px solid transparent;
+    color:inherit;
+}
+u {
+  #text-decoration-color:brown;
+  #text-decoration-thickness: 3px;
+}
+ .header-title {
+    font-size:1.8em;
+    font-family:helvetica;
+    font-weight:800;
+
+  }
+@media only screen and (max-width: 860px) {
+  .wrapper {
+      display: grid;
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      margin-top: 0;
+  }
+  header {
+      flex-direction:column;
+      padding:32px;
+
+  }
+  .header-title {
+      text-align:center;
+      font-size:2em;
+  }
+}
+
+u a, ref a, p a {
+   text-decoration:inherit;
+   color:inherit;
+}
+sup a {
+   #color: palevioletred;
+   font-size: 28px;
+   text-decoration:none;
+   font-family:Atkinson Bold;
+   
+}
+img {
+   width:100%; 
+   padding:10px;
+}
+footer {
+    font-size: 18px;
+    max-width: 620px;
+    text-align: center;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:24px;
+    color: black;
+} 
+footer p {
+   text-align:center;
+   font-size:inherit;
+}
+ 
+</style>
+<body style="background-color:color-mix(in oklab, #00fbfc 5%, #fff);">
+<header>
+<div class="header-title" ><span style="color:inherit">USC</span> IGC <br> AD detection challenge page </div>
+<nav>
+<a href="main.html">ABOUT</a>
+
+<a href="assignment.html">ASSIGNMENT</a>
+<a>IGC_RESULTS</a>
+<a>FAQ</a> 
+</nav>
+</header>
+
+
+<div class="wrapper">
+   <h1>IGC results</h1>
+</div>
+
+<footer>
+   <p> This research is funded <br>by the NIA under grant number U01 AG******</p>
+</footer>
+</body>
+</html>

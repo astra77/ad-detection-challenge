@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+ 
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body style="background: #edf2f7">
+<header>
+<div class="header-title" ><span style="color:inherit">USC</span> IGC <br> AD detection challenge page </div>
+
+<nav>
+<a href="index.html">ABOUT</a>
+<a href="assignment.html">ASSIGNMENT</a>
+<!--<a href="results.html">IGC_RESULTS</a>-->
+<a href="results.html">DESCRIPTIVE STATS</a>
+<a>FAQ</a>
+</nav>
+
+</header>
+<div class="wrapper">
+<h1>AI for Alzheimer's disease: prognostic challenge</h1>
+</div>
+<div class="wrapper" style="border-top:none;">
+<h2>Introduction</h2>
+<div>
+<p>
+The NIH-funded AIML <sup><a href="#footnote">[a]</a></sup> Consortium is launching a machine learning challenge to predict future clinical decline in elderly people who are cognitively healthy, or have mild cognitive impairment or Alzheimer’s disease. As we age, our brains tend to decline, but there is a wide variability between people who stay cognitively healthy until old age and those who develop dementia <sup><a href="#footnote">[b]</a></sup>. For elderly people with mild cognitive impairment, around 15% per year develop Alzheimer’s disease or a related form of dementia (e.g., Parkinson’s disease or vascular dementia). It is crucial to understand factors that predict future clinical decline, for treatment planning, selecting the correct treatments, and to identify and understand factors that resist or prevent dementia.
+<br><br>
+
+Recent work (van der Veere 2024)<sup><a href="#footnote">[c]</a><a href="#footnote">[d]</a></sup> shows the rate of clinical decline on a widely-used test, the Mini-Mental State Exam (MMSE): 30 points is a perfect score, and a score of 0 means that all questions were answered incorrectly. 
+</p>
+<img style="width:100%;" src="img/vderveere2.jpg">
+<img style="width:100%" src="img/vderveere1.jpg">
+</div>
+</div>
+
+<div id="why" class="wrapper" style="border-top:none;">
+   <h2>Why a challenge?</h2>
+   <p>Predictive models in machine learning often show excellent performance in publications, but may fail when tested on new data. Because published methods are not typically tested on the same datasets – or on sufficiently diverse data – it is often hard to tell which methods will perform best in practice, or when they will fail. <br><br>   On the bright side, AI competitions have ignited the field of deep learning for computer vision - the large-scale ImageNet (2012) dataset consisted of 14 million hand-labeled photographs; an annual benchmarking competition to identify these objects using AI methods greatly accelerated the fields of deep learning and AI.<br><br> Our challenge builds on the previously successful DREAM and TADPOLE challenges **add refs to these, and webpages about them**
+   </p>
+</div>
+<div id="why" class="wrapper" style="border-top:none;">
+   <h2>Benchmarking &<br> previous challenges</h2>
+<div>
+<p>
+This graph shows the accuracy, from 2011-2021, of the best AI methods to identify objects in photographs. Benchmarking on the large-scale ImageNet data (right) led to breakthroughs in convolutional neural networks, such as AlexNet.
+<img src="img/page_plot1.png">  
+<img src="img/page_plot2.png">
+
+</p>
+<p>This graph shows the accuracy, number of neural network parameters, and the compute time required to train the best AI methods to identify objects in photographs.
+<img src="img/page_plot3.png">
+</p>
+
+<p>For examples of AI methods applied to very large databases of over 85,000 MRIs, see (Lu et al. 2023); image-based diagnostic AI methods can also accelerate genetic target discovery by screening the genome (Koslov 2023).  </p>
+</div>
+</div>
+<!--<p style="text-align:right; font-family:sans-serif"> <a href="#">top &uarr; </a></p>-->
+
+<div  class="footnote-wrapper" >
+   <h2>Footnote</h2>
+   <div id="footnote" >
+        <span>[a]</span><br>
+        <span>[b]</span><br>
+        <div id="footnote-table" >
+         <div style="display:table-cell">[c]</div>
+         <div style="display:table-cell;padding-left:10px;"><u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209605">Van der Veere et al. (2024)</a></u>. Predicting Cognitive Decline in Amyloid-Positive Patients With Mild Cognitive Impairment or Mild Dementia.
+        </div>
+</div>
+        <br>
+       
+       
+        <span>[d]</span> 
+   </div> 
+   
+   
+</div>
+<!--<div class="next-page"><a  href="assignment.html"> >> the Assignment</a>
+</div>-->
+<footer>
+   <p> This research is funded <br>by the NIA under grant number U01 AG******</p>
+</footer>
+</body>
+</html>
