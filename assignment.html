@@ -3,6 +3,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>The Assignment</title>
 </head>
 <body style="background-color:color-mix(in oklab, #ffc7a9 5%, #fff);">
 <header>
@@ -11,8 +12,8 @@
 <a href="index.html">ABOUT</a>
 <a href="assignment.html">ASSIGNMENT</a>
 <!--<a href="results.html">IGC_RESULTS</a>-->
-<a href="results.html">DESCRIPTIVE STATS</a>
-<a>FAQ</a>
+<a href="assignment.html#descriptive-stats">DESCRIPTIVE STATS</a>
+<a href="faq.html">FAQ</a>
 </nav>
 </header>
 
@@ -24,8 +25,10 @@
 <p> 
 Use common data samples to predict clinical decline over a future, 2-year interval based on the Clinical Dementia Rating (CDR; specifically the sum of boxes score (sobCDR; on a scale of 0 (best score) to 18 (worst score)).
 
-sobCDR is a widely-used clinical assessment, also used in clinical trials of anti-dementia drugs such as lecanemab (van Dyck et al., 2022) [e]. The anti-Alzheimer drug, lecanemab, slows the rate of clinical decline over time (green line) in a large cohort of elderly people versus those treated with a placebo (black line) [graph from paper by van Dyck et al., NEJM, 2022]. The drug slowed cognitive decline (18-month change in sobCDR) by 27%, and drastically lowered brain amyloid load by 59 centiloids to 23 (below the PET amyloid positivity threshold).
+sobCDR is a widely-used clinical assessment, also used in clinical trials of anti-dementia drugs such as <i>lecanemab</i> (<u><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2212948">van Dyck et al., 2022</a></u>)<sup>[g]</sup>.
+<br><br>The anti-Alzheimer drug, <i>lecanemab</i>, slows the rate of clinical decline over time (green line) in a large cohort of elderly people versus those treated with a placebo (black line).
 <img src="img/page_data1.jpg">
+The drug slowed cognitive decline (18-month change in sobCDR) by 27%, and drastically lowered brain amyloid load by 59 centiloids to 23 (below the PET amyloid positivity threshold).
 </p>
 </div>
 <div class="wrapper" style="border-top:none;">
@@ -37,11 +40,11 @@ ML tasks
  There are <strong>3</strong> tasks, using different kinds of input data to predict this decline.
  Participants in the challenge can compete on any of these tasks, they do not have to take part in them all.  
 <br><br>
-/Task 1. Only use 3D T1-weighted anatomical brain MRI, a common type of scan collected in  hospital and research settings that provides detailed structural information about the brain.
+Task 1. Only use 3D T1-weighted anatomical brain MRI, a common type of scan collected in  hospital and research settings that provides detailed structural information about the brain.
 <br><br>
-/Task 2.3D T1-weighted MRI and commonly collected demographic data: age, sex, body mass index (BMI), and baseline score on the sobCDR.
+Task 2. 3D T1-weighted MRI and commonly collected demographic data: age, sex, body mass index (BMI), and baseline score on the sobCDR.
 <br><br>
-/Task 3. 3D T1-weighted MRI, commonly collected demographic data, and  extra information that would not universally be available: APOE genotype, educational level, other cognitive assessments, and medical history information collected at multiple time points, such as Height, Weight, BMI, and Blood Pressure.  Some of these variables may contain missing values.
+Task 3. 3D T1-weighted MRI, commonly collected demographic data, and  extra information that would not universally be available: APOE genotype, educational level, other cognitive assessments, and medical history information collected at multiple time points, such as Height, Weight, BMI, and Blood Pressure.  Some of these variables may contain missing values.
 
 
 
@@ -52,38 +55,158 @@ ML tasks
   <h2>
 Input datasets
 </h2>
-<div >
-<p>
-Participants will train and test methods using data from 4 widely used study cohorts:<br><br>
-<span class="bold">ADNI</span>  **add links to the websites explaining these datasets<br><br>
-<span class="bold">NACC</span>  <br><br>
-<span class="bold">OASIS3</span> <br><br>
-A 4th dataset will be disclosed later in the challenge, as an independent test dataset that is not yet public. 
-The numbers of available datasets are tabulated below:
-</p>
+<div>
+   <p>
+     Participants will train and test methods using data from 4 widely used study cohorts:<br><br>
+     <span class="bold">ADNI</span> <!-- **add links to the websites explaining these datasets--><br><br>
+     <span class="bold">NACC</span>  <br><br>
+     <span class="bold">OASIS3</span> <br><br>
+     A 4th dataset will be disclosed later in the challenge, as an independent test dataset that is not yet public. <br><br>
+     The numbers of available datasets are tabulated below:
+   </p>
 
-     <div style="width:500px; height:100px; border: 1px solid black;font-size:1.8em;">Table here</div>
-<div style="font-size:1.8em">
-  BL - Baseline visit that occurred within 90 days of T1-weighted brain MRI collection
-2Y - Visit between 1.75 and 2.25 years after the Baseline visit
-Recent - The most recent visit that is more than 1.75 years after the Baseline visit
-All - All visits for which sobCDR was collected, that were not the Baseline visit
-**Add from Chris and Emma’s slides, latest data
-**also can you add the paths on LONI to these datasets here? So a person who we get an account for could find them easily 
-ADNI data path on LONI:
-/ifs/loni/faculty/thompson/four_d/ADNI/Organized_Data_ADNI/T1_processing/deep_learning/part0_files/
-NACC data path: 
+
+      <table style="color:black;">
+        <tr class="bold">
+               <th>Cohort</th>
+               <th>BL to 2Y records</th>
+               <th>BL to Recent records</th>
+               <th>BL to All records</th>
+        </tr>  
+        <tr>
+          <td>ADNI</td><td>1,130</td><td>1,285</td><td>7,596</td>
+        </tr>
+        <tr>
+           <td>NACC</td><td>942</td><td>1,307</td><td>5,552</td>
+                   </tr>
+        <tr>
+            <td>OASIS</td><td>241</td><td>380</td><td>1,676</td>
+                    </tr>
+        <tr>
+             <td>Total</td><td>2,313</td><td>2,972</td><td>14,824</td>
+                     </tr>
+
+
+      </table>  
+    <p>
+  <span class="bold">BL</span> - Baseline visit that occurred within 90 days of T1-weighted brain MRI collection.<br>
+  <span class="bold">2Y</span> - Visit between 1.75 and 2.25 years after the Baseline visit.<br>
+  <span class="bold">Recent</span> - The most recent visit that is more than 1.75 years after the Baseline visit.<br>
+  <span class="bold">All</span> - All visits for which sobCDR was collected, that were not the Baseline visit.<br>
+    </p>
+
+   <!-- **Add from Chris and Emma’s slides, latest data
+    **also can you add the paths on LONI to these datasets here? So a person who we get an account for could find them easily 
+    ADNI data path on LONI:
+    NACC data path: 
 /ifs/loni/faculty/thompson/four_d/datasets/AI4AD/NACC/processed/deep_learning/part0_files/
 OASIS3 data path: 
 /ifs/loni/faculty/thompson/four_d/datasets/OASIS3/processed/deep_learning/part0_files/
- </div>
+   -->
 
 </div>
 </div>
-<div class="wrapper" style="border-top:none;">
+<div  class="wrapper" style="border-top:none;">
   <h2>
- Descriptive statistics examples
+  Training data - Subject Information 
+  </h2>
+  <p>
+
+Cohort,
+Site,
+Sex,
+Handedness,
+Ethnicity,
+Race,
+Education,
+APOE genotype,
+Age at T1 collection,
+Age at Baseline sobCDR collection,
+Age at follow-up sobCDR collection
+
+  </p>
+</div>
+<div  class="wrapper" style="border-top:none;">
+  <h2>
+  Training data - Clinical Diagnosis Information (All time points)
+  </h2>
+  <p>
+     Cognitive Status (Cognitively Normal, MCI, and Dementia; includes non-AD etiologies)
+  </p>  
+ </div> 
+
+ <div  class="wrapper" style="border-top:none;">
+  <h2>
+  Training data - Imaging information (From Baseline visit)
+  </h2>
+  <p>
+     Magnetic Field Strength,
+MRI Manufacturer,
+MRI Model
+  </p>  
+</div>
+
+<div  class="wrapper" style="border-top:none;">
+  <h2>
+  Training data - Cognitive Assessment Data (All time points)
+  </h2>
+
+  <p>
+    
+    Clinical Dementia Rating (CDR sum of boxes),
+Mini-Mental State Exam (MMSE),
+Trails Making Test A & B,
+Boston Naming Test,
+Categorical Fluency Test (CFT): Animals & Vegetables,
+Logical Memory: Immediate and Delayed recall,
+WAIS-R,
+Neuropsychiatric Inventory (NPI),
+Geriatric Depression Score (GDS)
+
+  </p>
+</div>
+<div  class="wrapper" style="border-top:none;">
+  <h2>
+  Training data - Medical History (All time points)
+  </h2>
+
+  <p>Height,
+Weight,
+BMI,
+Systolic Blood Pressure*,
+Diastolic Blood Pressure*,
+Heart Rate*
+</p>
+ </div> 
+<div id="descriptive-stats" class="wrapper" style="border-top:none;">
+  <h2>
+ Descriptive statistics
 </h2>
+<div>
+    <p>
+      Descriptive statistics of the datasets. To help analysts understand general patterns in the data, we show some summary statistics in the following graphs and diagrams:
+    </p>   
+<div>
+<div class="gallery">
+  <a target="_blank" href="img/chris1.png">
+    <img src="img/chris1.png" alt="baseline CDR to 2 year CDR" width="600" height="400">
+  </a>
+  <div class="desc">Baseline CDR to 2 year CDR</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img/chris2.png">
+    <img src="img/chris2.png" alt="Baseline CDR to Most Recent CDR" width="600" height="400">
+  </a>
+  <div class="desc">Baseline CDR to Most Recent CDR</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img/chris3.png">
+    <img src="img/chris3.png" alt="Baseline CDR to All Follow-Up CDR" width="600" height="400">
+  </a>
+  <div class="desc">Baseline CDR to All Follow-Up CDR</div>
+</div>
+</div><!--gallery wrapper-->
+</div>
 </div>
 <div class="wrapper"  style="border-top:none">
   <h2>
@@ -91,8 +214,8 @@ OASIS3 data path:
 </h2>
 <p>
 Participants in the challenge will be asked to predict decline in 2 ways:<br><br>
-/1. Train on 2 cohorts, test on one cohort left out; report R^2 (coefficient of determination between predicted and true values) and MAE (mean absolute error for predicted versus true drop in sobCDR) by cohort, and split into 3 diagnostic groups: control, MCI, and dementia. This test examines how well a trained model generalizes to cohorts it has not seen during training (“out of domain” generalization). <br><br>
-<strong>/2.</strong> Same but use 5-fold cross-validation, where some data from each cohort is used for training, but one-fifth of each cohort’s data (with groupings specified in the training data) is left out for testing (and cross validation is used to test on a different fifth of the data each time, maintaining independent train and test data). This test still uses test data that the AI methods were not trained on, but test data comes from the same studies (“within domain” generalization). 
+1. Train on 2 cohorts, test on one cohort left out; report R^2 (coefficient of determination between predicted and true values) and MAE (mean absolute error for predicted versus true drop in sobCDR) by cohort, and split into 3 diagnostic groups: control, MCI, and dementia. This test examines how well a trained model generalizes to cohorts it has not seen during training (“out of domain” generalization). <br><br>
+<strong>2.</strong> Same but use 5-fold cross-validation, where some data from each cohort is used for training, but one-fifth of each cohort’s data (with groupings specified in the training data) is left out for testing (and cross validation is used to test on a different fifth of the data each time, maintaining independent train and test data). This test still uses test data that the AI methods were not trained on, but test data comes from the same studies (“within domain” generalization). 
 </p>
 </div>
 <div class="wrapper"  style="border-top:none">
@@ -103,7 +226,7 @@ Participants in the challenge will be asked to predict decline in 2 ways:<br><br
 Challenge participants will be asked to report their results in a standard format, indicating the method used, training data, and the test performance on tasks attempted: <u><a   href="results.pdf" target="_blank">report format</a></u>
 
 </p>
-</div>
+</div> 
 <!--<p style="text-align:right; font-family:sans-serif"> <a href="#">top &uarr; </a></p>-->
 
 <!--<div class="next-page">
