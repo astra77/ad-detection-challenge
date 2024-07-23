@@ -1,5 +1,4 @@
 <!DOCTYPE html>
- 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"/>
@@ -8,16 +7,15 @@
 </head>
 <body style="background: #edf2f7">
 <header>
-<div class="header-title" ><span style="color:inherit">USC</span> IGC <br> AD detection challenge page </div>
-
-<nav>
-<a href="index.html">ABOUT</a>
-<a href="assignment.html">ASSIGNMENT</a>
-<!--<a href="results.html">IGC_RESULTS</a>-->
-<a href="assignment.html#descriptive-stats">DESCRIPTIVE STATS</a>
-<a href="faq.html">FAQ</a>
-</nav>
-
+   <div class="header-title">
+       Alzheimer's AI challenge 
+   </div>
+   <nav>
+      <a href="index.html">ABOUT</a>
+      <a href="assignment.html">ASSIGNMENT</a>
+      <a href="data.html">DATA ACCESS</a>
+      <a href="faq.html">FAQ</a>
+   </nav>
 </header>
 <div class="wrapper">
 <h1>AI for Alzheimer's disease: prognostic challenge</h1>
@@ -26,10 +24,10 @@
 <h2>Introduction</h2>
 <div>
 <p>
-The NIH-funded AIML <sup>[a]</sup> Consortium is launching a machine learning challenge to predict future clinical decline in elderly people who are cognitively healthy, or have mild cognitive impairment or Alzheimer’s disease. As we age, our brains tend to decline, but there is a wide variability between people who stay cognitively healthy until old age and those who develop dementia <sup>[b]</sup>. For elderly people with mild cognitive impairment, around 15% per year develop Alzheimer’s disease or a related form of dementia (e.g., Parkinson’s disease or vascular dementia). It is crucial to understand factors that predict future clinical decline, for treatment planning, selecting the correct treatments, and to identify and understand factors that resist or prevent dementia.
+The NIH-funded <u><a href="https://adsp.niagads.org/funded-programs/artificial-intelligence-and-machine-learning/">AIML</a></u> <sup>[a]</sup> Consortium is launching a machine learning challenge to predict future clinical decline in elderly people who are cognitively healthy, or have mild cognitive impairment or Alzheimer’s disease. As we age, our brains tend to decline, but there is a wide variability between people who stay cognitively healthy until old age and those who develop dementia. For elderly people with mild cognitive impairment, around 15% per year develop Alzheimer’s disease or a related form of dementia (e.g., Parkinson’s disease or vascular dementia). It is crucial to understand factors that predict future clinical decline, for treatment planning, selecting the correct treatments, and to identify and understand factors that resist or prevent dementia.
 <br><br>
 
-Recent work (<u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209605">van der Veere 2024</a></u>)<sup>[c][d]</sup> shows the rate of clinical decline on a widely-used test, the Mini-Mental State Exam (MMSE): 30 points is a perfect score, and a score of 0 means that all questions were answered incorrectly. 
+Recent work (<u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209605">van der Veere 2024</a></u>)<sup>[b]</sup> shows the rate of clinical decline on a widely-used test, the Mini-Mental State Exam (MMSE): 30 points is a perfect score, and a score of 0 means that all questions were answered incorrectly. 
 </p>
 <img style="width:100%;" src="img/vderveere2.jpg">
 <img style="width:100%" src="img/vderveere1.jpg">
@@ -38,23 +36,23 @@ Recent work (<u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209
 
 <div id="why" class="wrapper" style="border-top:none;">
    <h2>Why a challenge?</h2>
-   <p>Predictive models in machine learning often show excellent performance in publications, but may fail when tested on new data. Because published methods are not typically tested on the same datasets – or on sufficiently diverse data – it is often hard to tell which methods will perform best in practice, or when they will fail. <br><br>   On the bright side, AI competitions have ignited the field of deep learning for computer vision - the large-scale ImageNet (2012) dataset consisted of 14 million hand-labeled photographs; an annual benchmarking competition to identify these objects using AI methods greatly accelerated the fields of deep learning and AI.<br><br> Our challenge builds on the previously successful DREAM and TADPOLE challenges. <!--**add refs to these, and webpages about them**-->
+   <p>Predictive models in machine learning often show excellent performance in publications, but may fail when tested on new data. Because published methods are not typically tested on the same datasets – or on sufficiently diverse data – it is often hard to tell which methods will perform best in practice, or when they will fail. <br><br>   On the bright side, AI competitions have ignited the field of deep learning for computer vision - the large-scale <u><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">ImageNet (2012)</a></u><sup>[c]</sup> dataset consisted of 14 million hand-labeled photographs; an annual benchmarking competition to identify these objects using AI methods greatly accelerated the fields of deep learning and AI.<br><br> Our challenge builds on the previously successful <u><a href="https://dreamchallenges.org/alzheimers-disease-big-data-dream-challenge/">DREAM</a></u> and <u><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7315046/">TADPOLE</a></u> challenges. 
    </p>
 </div>
 <div id="why" class="wrapper" style="border-top:none;">
    <h2>Benchmarking &<br> previous challenges</h2>
 <div>
  <p>
-   This graph shows the accuracy, from 2011-2021, of the best AI methods to identify objects in photographs. Benchmarking on the large-scale ImageNet data (right) led to breakthroughs in convolutional neural networks, such as AlexNet.
+   This graph shows the accuracy, from 2011-2021, of the best AI methods to identify objects in photographs. Benchmarking on the large-scale ImageNet data (below) led to breakthroughs in convolutional neural networks, such as AlexNet.
     <img src="img/page_plot1.png">  
     <img src="img/page_plot2.png">
  </p>
  <p>
-   This graph shows the accuracy, number of neural network parameters, and the compute time required to train the best AI methods to identify objects in photographs.
+   This graph <sup>[d]</sup> shows the accuracy, number of neural network parameters, and the compute time required to train the best AI methods to identify objects in photographs.
    <img src="img/page_plot3.png">
  </p>
  <p>
-   For examples of AI methods applied to very large databases of over 85,000 MRIs, see (<u>Lu et al. 2023</u>);<sup>[e]</sup> image-based diagnostic AI methods can also accelerate genetic target discovery by screening the genome (<u>Koslov 2023</u>).<sup>[f]</sup>
+   For examples of AI methods applied to very large databases of over 85,000 MRIs, see (<u><a href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-022-00650-y">Lu et al. 2023</a></u>)<sup>[e]</sup>; image-based diagnostic AI methods can also accelerate genetic target discovery by screening the genome (<u><a href="https://www.nature.com/articles/d41586-023-03482-9">Koslov 2023</a></u>)<sup>[f]</sup>.
  </p>
 </div>
 </div>
@@ -65,37 +63,53 @@ Recent work (<u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209
         <div id="footnote-table" >
            <div style="display:table-row;">
            <div style="display:table-cell">[a]</div>
-           <div style="display:table-cell;padding-left:10px;"><u><a href="#">text</a></u>text</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://adsp.niagads.org/funded-programs/artificial-intelligence-and-machine-learning/">Artificial Intelligence and Machine Learning Consortium (AIML)</a></u></div>
            </div>
            
-           <div style="display:table-row;">
-           <div style="display:table-cell">[b]</div>
-           <div style="display:table-cell;padding-left:10px;"><u><a href="#">text</a></u>text</div>
-           </div>
 
            <div style="display:table-row;">  
-           <div style="display:table-cell">[c]</div>
+           <div style="display:table-cell">[b]</div>
            <div style="display:table-cell;padding-left:10px;"><u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209605">Van der Veere et al. (2024)</a></u>. Predicting Cognitive Decline in Amyloid-Positive Patients With Mild Cognitive Impairment or Mild Dementia.</div>
            </div>
 
            <div style="display:table-row;">
+           <div style="display:table-cell">[c]</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf">ImageNet (2012).</a></u> Krizhevsky, A., Sutskever, I., & Hinton, G. E. (2012). ImageNet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems 25 (NIPS 2012) (pp. 1097-1105).</div>
+           </div>
+
+           <div style="display:table-row;">
            <div style="display:table-cell">[d]</div>
-           <div style="display:table-cell;padding-left:10px;"><u><a href="#">text</a></u>text</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://www.mathworks.com/help/deeplearning/ug/pretrained-convolutional-neural-networks.html">Pretrained Deep Neural Networks</a></u></div>
            </div>
 
            <div style="display:table-row;">
            <div style="display:table-cell">[e]</div>
-           <div style="display:table-cell;padding-left:10px;"><u><a href="#">text</a></u>text</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://journalofbigdata.springeropen.com/articles/10.1186/s40537-022-00650-y"> Lu et al. (2023). </a></u>A practical Alzheimer’s disease classifier via brain imaging-based deep learning on 85,721 samples</div>
            </div>
 
            <div style="display:table-row;">
            <div style="display:table-cell">[f]</div>
-           <div style="display:table-cell;padding-left:10px;"><u><a href="#">text</a></u>text</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="#">Koslov (2023).</a></u> AI that reads brain scans shows promise for finding Alzheimer’s genes</div>
            </div>
            
            <div style="display:table-row;">
            <div style="display:table-cell">[g]</div>
            <div style="display:table-cell;padding-left:10px;"><u><a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2212948">van Dyck et al. (2022).</a></u> Lecanemab in Early Alzheimer’s Disease.</div>
+           </div>
+
+           <div style="display:table-row;">
+           <div style="display:table-cell">[h]</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://pubmed.ncbi.nlm.nih.gov/30321505/">D. Veitch et al. (2019). </a></u>Understanding disease progression and improving Alzheimer's disease clinical trials: Recent highlights from the Alzheimer's Disease Neuroimaging Initiative, Alzheimer’s Dement. 15(1):106-152 (2019), <u><a href="https://adni.loni.usc.edu/data-samples/data-types/">ADNI: data types</a></u> </div>
+           </div>
+           
+           <div style="display:table-row;">
+           <div style="display:table-cell">[i]</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://www.alz.washington.edu">National Alzheimer’s Coordinating Center (NACC)</a></u></div>
+           </div>
+
+           <div style="display:table-row;">
+           <div style="display:table-cell">[j]</div>
+           <div style="display:table-cell;padding-left:10px;"><u><a href="https://sites.wustl.edu/oasisbrains/home/oasis-3/">Open Access Series of Imaging Studies (OASIS)</a></u></div>
            </div>        
 
         </div>
@@ -106,7 +120,7 @@ Recent work (<u><a href="https://www.neurology.org/doi/10.1212/WNL.0000000000209
 <!--<div class="next-page"><a  href="assignment.html"> >> the Assignment</a>
 </div>-->
 <footer>
-   <p> This research is funded <br>by the NIA under grant number U01 AG******</p>
+   <p> This research is funded <br> by the NIA under grant number U01 AG068057</p>
 </footer>
 </body>
 </html>
