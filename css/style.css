@@ -149,6 +149,7 @@ table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   padding:12px;
+  font-size:1.1em;
 }
 table td{ text-align:center;}
 table.center {
@@ -211,5 +212,5 @@ h2{ text-align:center;font-size:1.7em;}
     font-size: 1em;
     margin:10px;
   }
-
+  table,th,td{ font-size:1.1em;}
 }
