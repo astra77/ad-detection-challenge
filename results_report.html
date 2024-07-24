@@ -2,8 +2,8 @@
 <head>
    <style>
 body{
-   font-size:16px;
-   font-family:tahoma;
+   font-size:18px;
+   
 }
       .wrapper{
             display: grid;
@@ -23,6 +23,7 @@ body{
      height:60px;
      text-align:center;
      background:lavender;
+font-family:arial narrow;
        
 }
 .last{
@@ -40,21 +41,28 @@ body{
 .split-wrapper{
    padding:0;overflow:auto;border-top:1px solid;
 }
-@media only screen and (max-width: 860px) {
-  .wrapper {
+@media only screen and (max-width: 1200px) {
+
+ body {
+    font-size:1em;
+ }
+ .wrapper {
       display: grid;
       grid-template-columns: auto;
       grid-template-rows: auto;
-      margin: 0 auto;
+      margin: auto;
       row-gap:20px;
       width:80%;
+ 
+     
   }
 .col{
 
-   border:5px solid pink;
+   border:5px solid silver;
    background:lavender;
-   padding:10px;
-   
+   padding:20px;
+   height:auto;
+    
 }
 .split-col-left{
    border-right:3px solid silver;
@@ -67,7 +75,7 @@ body{
 </head>
 
 <body>
-  
+    <h1>output table</h1>
     <div class="wrapper">
           <div class="col first">Group</div>
           <div class="col">Model<br>Desc.</div>
